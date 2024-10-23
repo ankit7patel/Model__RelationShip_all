@@ -6,7 +6,7 @@ from django.contrib import admin
 from app import views
 
 urlpatterns = [
-    path('',views.home),
+    path('',views.base),
      path('', admin.site.urls),
     
 

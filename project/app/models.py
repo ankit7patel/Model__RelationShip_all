@@ -8,7 +8,8 @@ class Aadhar(models.Model):
 
     def __str__(self):
         return str(self.aadhar)
-    
+
+
 
 class department(models.Model):
     dep_name=models.CharField(max_length=50)
@@ -27,5 +28,25 @@ class Student(models.Model):
     
     # def __str__(self):
     #     return str.stu_name
+
+
+
+class user(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.EmailField()
+    contact=models.IntegerField()
+    address=models.CharField(max_length=50)
+    def __str__(self):
+        return str.name
+
+
+class profile(models.Model):
+    name=models.CharField(max_length=50)
+    quli=models.CharField(max_length=50)
+    expe=models.CharField(max_length=50)
+    skills=models.CharField(max_length=50)
+    other=models.CharField(max_length=50)
+    def __str__(self):
+        return str(self.name)
     
 

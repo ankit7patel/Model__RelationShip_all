@@ -1,5 +1,8 @@
-from django.shortcuts import render  ,redirect
-# from .models import Studenttudent , Aadhar
+from django.shortcuts import render 
+from .forms import userform , Profileform
 
-def home(request):
-    return redirect(home)
+def base(request):
+    context={}
+    context['user'] = userform
+    context['profile'] = Profileform
+    return render(request, 'base.html',context)
