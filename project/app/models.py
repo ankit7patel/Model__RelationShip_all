@@ -41,12 +41,12 @@ class user(models.Model):
 
 
 class profile(models.Model):
-    name=models.CharField(max_length=50)
+    name=models.OneToOneField(user,on_delete=models.CASCADE)
     quli=models.CharField(max_length=50)
-    expe=models.CharField(max_length=50)
+    expe=models.IntegerField()
     skills=models.CharField(max_length=50)
     other=models.CharField(max_length=50)
-    def __str__(self):
-        return str(self.name)
+    # def __str__(self):
+    #     return str(self.quli)
     
 
