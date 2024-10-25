@@ -13,7 +13,7 @@
             {{user}}
             <button text="submit" > submit </button>
         </form>
-        <form action=""  method="post"> 
+        <form action="{% url 'profiledata' %}"  method="post"> 
             {% csrf_token %}
             <p> Profile Form </p>
             {{profile}}
@@ -22,7 +22,19 @@
 
     </section>
 
-    
+
+    <table>
+        <thead>
+             <td>no</td>
+             <td> name </td>
+             <td > email </td>
+        </thead>
+        {% for i in  %}
+        <tr> 
+            <td> {{foorloop.counter}}</td>
+            <td> </td>
+        </tr>
+    </table>
 
 
     
