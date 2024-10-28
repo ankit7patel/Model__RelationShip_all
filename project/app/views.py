@@ -4,10 +4,10 @@ from .forms import userform , Profileform
 def base(request):
     context={}
     context['user'] = userform
-    context['profile'] = Profileform.
+    context['profile'] = Profileform
 
     my_list=[]
-    
+
     return render(request, 'base.html',context)
 
 
